@@ -1,131 +1,189 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <style>
-        div {
-            float: left;
-            width: 30%;
+        .square {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: mymove 2s 1s infinite;
         }
 
-        .image1 {
+        @keyframes mymove {
+            from {
+                left: 0px;
+                width: 100px;
+                height: 100px;
+                transform: rotate(0deg);
+                border-radius: 0px
+            }
+
+            to {
+                left: 200px;
+                width: 200px;
+                height: 200px;
+                transform: rotate(180deg);
+            }
+        }
+
+        .one {
+            background: yellow;
+            border: 2px solid black;
+
+            width: 22%;
+            height: auto;
+            transition: all 0s ease-in-out;
+        }
+
+        .one:hover {
+            transform: rotate(180deg);
+        }
+
+        .first {
             filter: grayscale(100%);
-
         }
 
-        .image2 {
-            filter: blur(5px);
-
+        .second {
+            filter: blur(3px);
         }
 
-        .image3 {
-            filter: opacity(30%);
-
+        .third {
+            filter: opacity(30px);
         }
+
+        .last {
+            float: left;
+            width: 50%;
+        }
+
+        .last1 {
+            float: left;
+            width: 50%;
+            text-shadow: 5px palevioletred;
+        }
+
+        .last1 h3 {
+            font-size: 39px;
+            color: #f7f1f1;
+            text-shadow: 4px 2px blue;
+        }
+
 
         figcaption {
-            background-color: black;
-            color: white;
-            font-style: italic;
+            color: rgb(0, 0, 0);
             padding: 2px;
             text-align: center;
+            background-color: #fcfcfc;
+            margin-top: -20px;
+            padding-right: 15px;
+            padding-top: 20px;
+            padding-bottom :20px ;
         }
 
-        .gallery {
-            background-color: aqua;
-            width: 100%;
+        figure {
+            padding: 4px;
+            margin: auto;
+            float: left;
         }
 
-        .gallery img {
-            width: 22%;
-            padding: 15px;
+        .gallary img {
+            width: 21%;
+            
         }
 
-        @media screen and (max-width:300px) {
-            .gallery img {
+        .gallary img:hover {
+            filter: grayscale(50%);
+
+        }
+
+        @media screen and (max-width: 300px) {
+
+            .gallary img {
                 width: 95%;
             }
         }
 
-        @media screen and (min-width:301px) and (max-width:800px) {
-            .gallery img {
+        @media screen and (min-width: 301px) and (max-width: 800px) {
+
+            .gallary img {
                 width: 40%;
             }
         }
 
-        @media screen and (min-width:801px) {
-            .gallery img {
-                width: 22%;
-            }
+        .shadow div {
+            float: left;
+            padding-left: 5px;
+
+
         }
 
-        .shadow {
-            float: left;
+        .shadow figure {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .shadow img {
+            box-shadow: 2px 2px 4px #000000;
+            width: 400px;
+            height: 250px;
+
         }
 
         .shadow h1 {
             color: white;
             text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
         }
-
-        .shadow img {
-            box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-            width: 400px;
-            height: 250px;
-
-        }
-
-        .shadow img figcaption {
-            background-color: black;
-            color: white;
-            font-style: italic;
-            padding: 2px;
-            text-align: center;
-        }
     </style>
-
 </head>
 
 <body>
+    <h2>Question-01</h2>
 
-    <h1>Question#03</h1>
+    <div class="one">This is is no one who loves pain itself, who seeks after it and wants to have it , simply because
+        it is pain... </div>
+    <h2>Question-02</h2>
+    <div class="square"></div>
+
+    <h2>Question-03</h2>
     <div>
-        <h3>greyscale</h3>
-        <img src="forest.jpg" class="image1" width="300" height="300">
+        <img src="forest22.jpg" alt="image1" class="first" width="220px" height="200px">
+        <img src="forest.jpg" alt="image1" class="second" width="220px" height="200px">
+        <img src="forest.jpg" alt="image1" class="third" width="220px" height="200px">
     </div>
-    <div>
-        <h3>blur</h3>
-        <img src="forest.jpg" class="image2" width="300" height="300">
-    </div>
-    <div>
-        <h3> opacity</h3>
-        <img src="forest.jpg" class="image3" width="300" height="300">
-    </div>
-    <h1>Question#04</h1>
-    <div class="gallery">
+
+    <h2>Question-04</h2>
+    <div class="gallary">
         <figure>
-            <img src="forest.jpg" alt="image1">
-            <figcaption>Add a description of the image</figcaption>
-            <img src="forest.jpg" alt="image2">
-            <figcaption>Add a description of the image</figcaption>
-            <img src="forest.jpg" alt="image3">
-            <figcaption>Add a description of the image</figcaption>
-            <img src="forest.jpg" alt="image4">
-            <figcaption>Add a description of the image</figcaption>
+            <img src="forest.jpg" alt="Trulli" style="width:100%">
+            <figcaption>Add a description of the image here</figcaption>
+        </figure>
+        <figure>
+            <img src="forest.jpg" alt="Trulli" style="width:100%">
+            <figcaption>Add a description of the image here</figcaption>
+        </figure>
+        <figure>
+            <img src="forest.jpg" alt="Trulli" style="width:100%">
+            <figcaption>Add a description of the image here</figcaption>
+        </figure>
+        <figure>
+            <img src="forest.jpg" alt="Trulli" style="width:100%">
+            <figcaption>Add a description of the image here</figcaption>
         </figure>
     </div>
-    <h1>Question#05</h1>
+    <h2 > <br>Question#05</h2>
     <div class="shadow">
         <div>
             <h1>Text Shadow effects</h1>
         </div>
         <div>
-            <img src="image123.jpeg" alt="">
-            <figcaption>Add a description of the image</figcaption>
+            <figure>
+                <img src="forest.jpg" alt="Trulli" style="width:100%">
+                <figcaption>Add a description of the image here</figcaption>
+            </figure>
         </div>
     </div>
-
-
-
 
 </body>
 
