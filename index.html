@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <style>
+        div {
+            float: left;
+            width: 30%;
+        }
+
+        .image1 {
+            filter: grayscale(100%);
+
+        }
+
+        .image2 {
+            filter: blur(5px);
+
+        }
+
+        .image3 {
+            filter: opacity(30%);
+
+        }
+
+        figcaption {
+            background-color: black;
+            color: white;
+            font-style: italic;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .gallery {
+            background-color: aqua;
+            width: 100%;
+        }
+
+        .gallery img {
+            width: 22%;
+            padding: 15px;
+        }
+
+        @media screen and (max-width:300px) {
+            .gallery img {
+                width: 95%;
+            }
+        }
+
+        @media screen and (min-width:301px) and (max-width:800px) {
+            .gallery img {
+                width: 40%;
+            }
+        }
+
+        @media screen and (min-width:801px) {
+            .gallery img {
+                width: 22%;
+            }
+        }
+
+        .shadow {
+            float: left;
+        }
+
+        .shadow h1 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .shadow img {
+            box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            width: 400px;
+            height: 250px;
+
+        }
+
+        .shadow img figcaption {
+            background-color: black;
+            color: white;
+            font-style: italic;
+            padding: 2px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Question#03</h1>
+    <div>
+        <h3>greyscale</h3>
+        <img src="forest.jpg" class="image1" width="300" height="300">
+    </div>
+    <div>
+        <h3>blur</h3>
+        <img src="forest.jpg" class="image2" width="300" height="300">
+    </div>
+    <div>
+        <h3> opacity</h3>
+        <img src="forest.jpg" class="image3" width="300" height="300">
+    </div>
+    <h1>Question#04</h1>
+    <div class="gallery">
+        <figure>
+            <img src="forest.jpg" alt="image1">
+            <figcaption>Add a description of the image</figcaption>
+            <img src="forest.jpg" alt="image2">
+            <figcaption>Add a description of the image</figcaption>
+            <img src="forest.jpg" alt="image3">
+            <figcaption>Add a description of the image</figcaption>
+            <img src="forest.jpg" alt="image4">
+            <figcaption>Add a description of the image</figcaption>
+        </figure>
+    </div>
+    <h1>Question#05</h1>
+    <div class="shadow">
+        <div>
+            <h1>Text Shadow effects</h1>
+        </div>
+        <div>
+            <img src="image123.jpeg" alt="">
+            <figcaption>Add a description of the image</figcaption>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
